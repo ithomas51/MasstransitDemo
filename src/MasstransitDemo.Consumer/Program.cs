@@ -13,7 +13,6 @@ builder.ConfigureServices((hostContext, services) =>
         busConfigurator.AddConsumers(entryAssembly);
         busConfigurator.UsingRabbitMq((context, busFactoryConfigurator) =>
         {
-            busFactoryConfigurator.Host("rabbitmq", "/", h => { });
 
             busFactoryConfigurator.ConfigureEndpoints(context);
         });
